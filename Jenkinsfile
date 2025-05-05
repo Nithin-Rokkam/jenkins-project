@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t jenkins-nginx .'
+                sh 'sh docker build --no-cache -t jenkins-nginx .'
+
             }
         }
 
